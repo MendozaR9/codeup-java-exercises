@@ -45,25 +45,63 @@ public class ControlFlowExercises {
 //            System.out.println();
 //        }
 
-        boolean continued;
-        do {
-            System.out.println("What number would you like to go up to? ");
-            String stopingValueString = scanner.next();
-            System.out.println("Here is your table!");
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | -----");
-            int stopingValue = Integer.parseInt(stopingValueString);
-            for (int i = 1; i <= stopingValue; i++) {
-                int squared = (int) Math.pow(i, 2);
-                int cubed = (int) Math.pow(i, 3);
-                System.out.print(i + "      |");
-                System.out.print(" " + squared + "       |");
-                System.out.println(" " + cubed + "   ");
-            }
-            System.out.println("Do you want to Continue? (Y/N)");
+        boolean continued =false;
+//        do {
+//            System.out.println("What number would you like to go up to? ");
+//            String stopingValueString = scanner.next();
+//            System.out.println("Here is your table!");
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | -----");
+//            int stopingValue = Integer.parseInt(stopingValueString);
+//            for (int i = 1; i <= stopingValue; i++) {
+//                int squared = (int) Math.pow(i, 2);
+//                int cubed = (int) Math.pow(i, 3);
+//                System.out.print(i + "      |");
+//                System.out.print(" " + squared + "       |");
+//                System.out.println(" " + cubed + "   ");
+//            }
+//            System.out.println("Do you want to Continue? (Y/N)");
+//            String userConinues = scanner.next();
+//            continued = userConinues.equalsIgnoreCase("y");
+//        }while (continued);
+//        System.out.println("ok bye 👋");
+//
+//    }
+
+    do {
+        System.out.print("Enter a your numerical grade: ");
+        if (scanner.hasNextInt()){
+        int numberGrade = scanner.nextInt();
+        char grade;
+        if (numberGrade <=100 && numberGrade>=88){
+            grade = 'A';
+            System.out.println("your grade is "+ grade);
+        }else if (numberGrade <= 87 && numberGrade >=80){
+            grade = 'B';
+            System.out.println("your grade is "+ grade);
+        }else if (numberGrade <=79 && numberGrade >= 67){
+            grade ='C';
+            System.out.println("your grade is "+ grade);
+        }else if (numberGrade <= 66 && numberGrade >= 60){
+            grade ='D';
+            System.out.println("your grade is "+ grade);
+        }else if (numberGrade <= 59 && numberGrade >= 0){
+            grade = 'F';
+            System.out.println("your grade is "+ grade);
+        }else {
+            System.out.println("That is not a valid");
+        }
+        }else {
+            System.out.println("not a number");
+        }
+
+        System.out.println("Do you want to Continue? (Y/N)");
             String userConinues = scanner.next();
             continued = userConinues.equalsIgnoreCase("y");
-        }while (continued);
+
+
+    }while (continued);
+
         System.out.println("ok bye 👋");
 
     }
