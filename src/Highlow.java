@@ -5,14 +5,22 @@ public class Highlow {
         Scanner scanner = new Scanner(System.in);
        int randomNumberOf100 = MethodsExercises.randomNumber(100);
 //        System.out.println(randomNumberOf100);
-        System.out.print("Guess the number between 1 and 100: ");
-        int userGuess = scanner.nextInt();
-        if (userGuess == randomNumberOf100){
-            System.out.println("GOOD GUESS");
-        }else if (userGuess >randomNumberOf100){
-            System.out.println("HIGER");
-        }else{
-            System.out.println("LOWER");
-        }
+        int guessAttemps=0;
+        int guesslimit = 10;
+        do {
+            System.out.print("Guess the number between 1 and 100: ");
+            int userGuess = scanner.nextInt();
+            guessAttemps++;
+            if (userGuess == randomNumberOf100) {
+                System.out.println("GOOD GUESS");
+                break;
+            } else if (userGuess > randomNumberOf100) {
+                System.out.println("LOWER");
+            } else {
+                System.out.println("HIGER");
+            }
+        }while (guessAttemps < guesslimit);
+        System.out.println("The Number was: "+ randomNumberOf100);
+        System.out.println("Amount of attempts: " + guessAttemps);
     }
 }
