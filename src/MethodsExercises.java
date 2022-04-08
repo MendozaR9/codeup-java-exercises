@@ -4,7 +4,8 @@ public class MethodsExercises {
     public static void main(String[] args) {
 //        ex1();
 //        ex2();
-        ex3();
+        ex4();
+
     }
     public static void ex1(){
         System.out.println(5+"+"+6+"= "+addition(5, 6));
@@ -18,7 +19,7 @@ public class MethodsExercises {
         int userInput = getInteger(1, 10);
     }
 
-    public static void ex3(){
+    public static void ex4(){
         System.out.print("Enter the number of sides for the dice: ");
         int diceSide = scanner().nextInt();
         System.out.println("First dice is: "+randomNumber(diceSide));
@@ -26,15 +27,15 @@ public class MethodsExercises {
         System.out.println("Do you want to try again? (y/n)");
         String willContinue = scanner().next();
         if (willContinue.equalsIgnoreCase("y")){
-            ex3();
+            ex4();
         }else {
             System.out.println("bye");
         }
 
     }
 
-    public static int randomNumber(int num){
-        return (int)Math.floor(Math.random()*(num)+1);
+    public static int randomNumber(int maxNum){
+        return (int)Math.floor(Math.random()*(maxNum)+1);
     }
 
     public static Integer addition(int num1, int num2){
