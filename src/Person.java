@@ -8,6 +8,8 @@ public class Person {
 
        person.sayHello();
        person4.sayHello();
+       person.setName("joe");
+       person.sayHello();
     }
     //constructor
     public Person(String name){

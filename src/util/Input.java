@@ -3,11 +3,11 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner =new Scanner(System.in);
+    private Scanner scanner;
 
 
     public Input(){
-
+    this.scanner= new Scanner(System.in);
     }
     //methods
     public String getString(){
@@ -16,10 +16,10 @@ public class Input {
     public boolean yesNo(){
         String testSting = getString();
         if (testSting.equalsIgnoreCase("y")||testSting.equalsIgnoreCase("yes")){
-            System.out.println(true);
+
             return true;
         }else {
-            System.out.println(false);
+
             return false;
         }
 
