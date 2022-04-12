@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class Input {
     private Scanner scanner =new Scanner(System.in);
 
-    public static void  main (String[] args) {
 
-    }
     public Input(){
 
     }
@@ -49,7 +47,6 @@ public class Input {
         }
     }
     public double getDouble(){
-
         return this.scanner.nextDouble();
     }
 }
