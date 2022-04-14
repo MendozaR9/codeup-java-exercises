@@ -7,8 +7,7 @@ public class CircleApp {
         Input input = new Input();
         Input input2 = new Input();
         do {
-        System.out.print("Give me the radius: ");
-        Circle circle = new Circle(input.getDouble());
+        Circle circle = new Circle(input.getDouble("Give me the radius: "));
 
         System.out.println("Do You Want to Continue?");
         }while (input2.yesNo());

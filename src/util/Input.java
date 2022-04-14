@@ -25,7 +25,7 @@ public class Input {
 
     }
     public int getInt(int min, int max){
-        int input = getInt();
+        int input = this.scanner.nextInt();
         if (min < input && input < max){
             System.out.println(input+ " is a number between "+min+" and "+max);
             return input;
@@ -33,11 +33,12 @@ public class Input {
          return getInt(min, max);
         }
     }
-    public int getInt(){
+    public int getInt(String prompt){
+        System.out.print(prompt);
         return this.scanner.nextInt();
     }
     public double getDouble(double min, double max){
-        double input = getDouble();
+        double input = this.scanner.nextDouble();
         if (min<input && input<max){
             System.out.println(input+ " is a number between "+min+" and "+max);
             return input;
@@ -46,7 +47,8 @@ public class Input {
             return getDouble(min, max);
         }
     }
-    public double getDouble(){
+    public double getDouble(String prompt){
+        System.out.print(prompt);
         return this.scanner.nextDouble();
     }
 }
