@@ -1,7 +1,7 @@
 package shapes;
 
 public class Rectangle {
-    private int length;
+    int length;
     private int width;
 
     public Rectangle(int l, int w){
