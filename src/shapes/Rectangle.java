@@ -9,6 +9,16 @@ public class Rectangle extends Quadrilateral implements Measurable {
     }
 
     @Override
+    void setLength(int length) {
+    this.length = length;
+    }
+
+    @Override
+    void setWidth(int width) {
+    this.width = width;
+    }
+
+    @Override
     public double getPerimeter() {
         return super.getLength()*super.getWidth();
     }

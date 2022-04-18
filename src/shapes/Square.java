@@ -16,6 +16,16 @@ public class Square extends Quadrilateral{
         return super.getLength()*2;
     }
 
+    @Override
+    protected void setLength(int length) {
+    this.length = length;
+    }
+
+    @Override
+    protected void setWidth(int width) {
+    this.width = width;
+    }
+
 //    public Square(int sides){
 //        super(sides,sides);
 //
