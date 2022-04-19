@@ -20,9 +20,7 @@ public class ArraysExercises {
 
     public static String[] addPerson(String[] person, String addedPerson){
         String [] newPersons = new String[person.length+1];
-        for (int i = 0; i < person.length; i++) {
-            newPersons[i] = person[i];
-        }
+        System.arraycopy(person, 0, newPersons, 0, person.length);
         newPersons[person.length] = addedPerson;
         return newPersons;
     }
