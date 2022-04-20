@@ -19,7 +19,7 @@ public class MoviesApplication {
             }
             enterChoice(choice);
 
-        }while (!(choice ==0));
+        }while (true);
         System.out.println("bye");
     }
 

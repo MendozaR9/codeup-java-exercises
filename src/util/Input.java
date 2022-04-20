@@ -35,8 +35,14 @@ public class Input {
     }
     public int getInt(String prompt){
         System.out.print(prompt);
-        return this.scanner.nextInt();
+        try {
+            return Integer.parseInt(getString());
+        }catch (NumberFormatException e){
+            System.out.println("Not a valid number");
+            return getInt(prompt);
+        }
     }
+
     public double getDouble(double min, double max){
         double input = this.scanner.nextDouble();
         if (min<input && input<max){
@@ -49,6 +55,10 @@ public class Input {
     }
     public double getDouble(String prompt){
         System.out.print(prompt);
-        return this.scanner.nextDouble();
+        try {
+            return Double.parseDouble(getString());
+        }catch (NumberFormatException e){
+            return getDouble(prompt);
+        }
     }
 }

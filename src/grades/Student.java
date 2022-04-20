@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Student {
     private String names;
-    private ArrayList <Integer> grades;
+    private ArrayList <Integer> grades = new ArrayList<>();
 
     public static void main(String[] args) {
         Student student = new Student("joe");
@@ -17,12 +17,13 @@ public class Student {
 
     public Student(String names) {
         this.names = names;
-        this.grades = new ArrayList<>();
+//        this.grades = new ArrayList<>();
     }
 
     public String getNames() {
         return names;
     }
+
     public void addGrade(int grade){
         this.grades.add(grade);
     }
