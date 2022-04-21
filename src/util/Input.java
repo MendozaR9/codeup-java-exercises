@@ -33,6 +33,7 @@ public class Input {
          return getInt(min, max);
         }
     }
+
     public int getInt(String prompt){
         System.out.print(prompt);
         try {
@@ -53,6 +54,7 @@ public class Input {
             return getDouble(min, max);
         }
     }
+
     public double getDouble(String prompt){
         System.out.print(prompt);
         try {
