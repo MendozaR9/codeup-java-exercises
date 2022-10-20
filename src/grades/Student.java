@@ -12,6 +12,7 @@ public class Student {
         student.addGrade(5);
         student.addGrade(5);
         student.addGrade(10);
+        System.out.println(student.grades);
         System.out.println(student.getGradeAverage());
     }
 
